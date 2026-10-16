@@ -15,14 +15,21 @@
 <body>
 
 <h1>SlidePop! 개인정보처리방침</h1>
-<p class="meta">시행일: 2026년 10월 16일 · 개발자: 빌드에러 (BuildError)</p>
+<p class="meta">시행일: 2026년 10월 16일 · 개발자: 빌드에러 (BuildError) · <a href="#en">English</a></p>
 
 <p>이 방침은 Android 앱 <strong>SlidePop!</strong>(패키지 이름 <code>com.jaemoon.slidepop</code>, 이하 "앱")에 적용됩니다.</p>
 
-<h2>1. 앱이 직접 수집하는 정보</h2>
-<p>앱은 계정을 만들지 않으며, 이름·이메일·전화번호 등 개인정보를 요구하거나 개발자의 서버로 전송하지 않습니다. 단, 2-2절의 랭킹 기능은 Google Play 게임즈 계정을 사용합니다. 진행 중인 게임과 최고 기록은 <strong>기기 안에만</strong> 저장되며, 앱을 삭제하면 함께 삭제됩니다.</p>
+<h2>1. 앱이 수집하는 정보</h2>
+<p>앱은 실명·전화번호·주소를 묻지 않습니다. 진행 중인 게임과 기기 최고 기록은 기기 안에 저장됩니다.</p>
+<p>다만 전 세계 랭킹을 위해 다음 정보를 개발자의 Firebase 프로젝트(Google Cloud)에 저장합니다. 자세한 내용은 2-2~2-5절에 있습니다.</p>
+<ul>
+  <li>앱이 자동으로 만드는 무작위 사용자 ID(익명 계정)</li>
+  <li>닉네임(자동으로 정해지거나 직접 입력한 것)과 최고 점수, 기록·변경 시각</li>
+  <li>신고 기록(신고한 사람과 신고된 사람의 사용자 ID, 신고 당시 닉네임, 시각)</li>
+  <li>Google 계정을 연결한 경우에만: Google 계정 ID와 이메일 주소</li>
+</ul>
 
-<h2>2. 광고·통계·랭킹(Google 서비스)을 통해 수집되는 정보</h2>
+<h2>2. 광고·통계(Google 서비스)를 통해 수집되는 정보</h2>
 <p>앱은 Google AdMob을 통해 광고를 표시합니다. Google과 그 광고 파트너는 광고를 제공·측정하기 위해 다음 정보를 수집하고 처리할 수 있습니다.</p>
 <ul>
   <li>광고 식별자(Advertising ID) 등 기기 식별자</li>
@@ -35,54 +42,100 @@
 <p>맞춤 광고는 기기 설정에서 끌 수 있습니다. Android: 설정 → Google → 광고 → "광고 맞춤설정 선택 해제" 또는 "광고 ID 삭제".</p>
 
 <h2>2-1. 앱 이용 통계 (Google Analytics for Firebase)</h2>
-<p>앱 개선을 위해 Google Analytics for Firebase로 앱 이용 통계를 수집합니다. 수집 항목: 앱 인스턴스 ID, Android 광고 ID, 앱 이용 기록(앱 실행, 게임 시작·종료, 점수·이동 수·플레이 시간, 아이템·광고 사용), 기기 정보(모델, OS 버전, 언어), IP 주소에서 추정한 대략적인 위치(국가·지역 수준). 이 정보는 이름이나 연락처 같은 개인 식별 정보를 포함하지 않으며, Google이 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 따라 처리합니다.</p>
+<p>앱 개선을 위해 Google Analytics for Firebase로 앱 이용 통계를 수집합니다. 수집 항목: 앱 인스턴스 ID, Android 광고 ID, 앱 이용 기록(앱 실행, 게임 시작·종료, 점수·이동 수·플레이 시간, 아이템·광고 사용, 랭킹 열기·점수 올리기), 기기 정보(모델, OS 버전, 언어), IP 주소에서 추정한 대략적인 위치(국가·지역 수준). 닉네임과 이메일은 통계에 넣지 않습니다.</p>
 <p>유럽경제지역(EEA)·영국·스위스 사용자는 동의 화면에서 허용한 범위 안에서만 수집하며, 앱 설정의 개인정보 옵션에서 언제든 바꿀 수 있습니다. 사용자별 이용 기록은 마지막으로 앱을 사용한 날부터 14개월이 지나면 자동으로 삭제됩니다.</p>
 
-<h2>2-2. 랭킹 (Google Play 게임즈)</h2>
-<p>앱은 전 세계 랭킹을 보여 주기 위해 Google Play 게임즈 서비스를 사용합니다. 앱을 켜면 기기에 로그인된 Google Play 게임즈 계정으로 자동 로그인을 시도하며, 로그인하지 않아도 게임은 그대로 할 수 있습니다(이때는 랭킹에 점수가 올라가지 않습니다).</p>
-<p>로그인하면 다음 정보가 Google로 전송되어 처리됩니다.</p>
+<h2>2-2. 랭킹 (Firebase)</h2>
+<p>앱은 전 세계 랭킹을 위해 Google의 Firebase 서비스를 사용합니다.</p>
 <ul>
-  <li>Play 게임즈 프로필 정보: 플레이어 ID·게이머태그(닉네임)·아바타</li>
-  <li>판이 끝났을 때의 점수(랭킹 표시용)</li>
-  <li>Google이 서비스 안정성과 개선을 위해 수집하는 이용·진단 정보</li>
+  <li><strong>로그인</strong>: 앱을 켜면 Firebase Authentication으로 익명 계정이 자동으로 만들어집니다. 이름이나 이메일은 필요 없습니다. Firebase Authentication은 가입·로그인 남용을 막기 위해 IP 주소를 처리합니다.</li>
+  <li><strong>저장 위치</strong>: 닉네임·최고 점수·신고 기록은 Cloud Firestore(서울 리전, asia-northeast3)에 저장됩니다.</li>
+  <li><strong>부정 사용 방지</strong>: Firebase App Check와 Google Play Integrity로 요청이 정상 앱에서 왔는지 확인합니다. 이때 기기·앱 무결성 정보가 Google에서 처리됩니다.</li>
+  <li><strong>공개 범위</strong>: 랭킹 화면에는 다른 플레이어에게 내 <strong>닉네임과 최고 점수</strong>가 보입니다. 사용자 ID, 이메일, Google 계정 정보는 보이지 않습니다.</li>
+  <li>전송은 암호화(HTTPS)되며, 개발자는 이 정보를 판매하거나 광고에 쓰지 않습니다.</li>
 </ul>
-<p>랭킹의 닉네임·아바타·점수는 Play 게임즈 프로필 공개 설정에 따라 다른 플레이어에게 보일 수 있습니다. 앱의 랭킹 화면에는 다른 플레이어의 닉네임과 점수가 표시됩니다. 이 정보는 개발자의 서버가 아니라 Google이 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>에 따라 처리하며, 개발자는 이를 판매하지 않습니다. 전송은 암호화(HTTPS)됩니다.</p>
-<p><strong>삭제 방법</strong>: <a href="https://play.google.com/games/profile">Play 게임즈 프로필</a> 또는 <a href="https://myaccount.google.com">Google 계정</a>에서 이 게임의 데이터 또는 Play 게임즈 계정 전체를 삭제할 수 있습니다. 앱을 삭제해도 Google에 저장된 랭킹 점수는 지워지지 않습니다.</p>
+
+<h2 id="nickname">2-3. 닉네임 규칙</h2>
+<p>처음에는 "플레이어123456" 같은 자동 닉네임이 정해지며, 설정이나 랭킹 화면에서 바꿀 수 있습니다(한글 2~7자 또는 영문 4~14자, 한글·영문·숫자·_ 만, 하루 한 번).</p>
+<p>다음과 같은 닉네임은 쓸 수 없습니다.</p>
+<ul>
+  <li>욕설, 성적인 표현, 혐오·차별 표현, 폭력·자해를 부추기는 표현</li>
+  <li>다른 사람이나 운영자·관리자를 사칭하는 이름</li>
+  <li>실명, 전화번호 등 다른 사람의 개인정보</li>
+  <li>광고, 불법 행위를 알리는 이름</li>
+</ul>
+<p>앱은 금칙어 목록(<a href="licenses.html">오픈소스 표기</a>)으로 닉네임을 먼저 거릅니다. 걸러지지 않은 부적절한 닉네임은 신고를 받아 확인한 뒤, 예고 없이 자동 닉네임으로 바꾸거나 랭킹에서 숨길 수 있습니다. 닉네임을 바꾸면 이 규칙에 동의한 것으로 봅니다.</p>
+
+<h2>2-4. 숨기기와 신고</h2>
+<p>랭킹에서 다른 플레이어의 닉네임을 길게 누르면 "이 닉네임 숨기고 신고"를 할 수 있습니다. 숨긴 닉네임은 내 기기에서 "숨김"으로 보이고, 신고는 개발자에게 전달됩니다(신고한 사람과 신고된 사람의 사용자 ID, 신고 당시 닉네임, 시각). 개발자는 신고를 확인해 2-3절에 따라 처리합니다.</p>
+
+<h2>2-5. Google 계정 연결 (선택)</h2>
+<p>설정에서 Google 계정을 연결하면, 다른 기기나 앱을 다시 설치한 뒤에도 같은 기록을 불러올 수 있습니다. 연결한 경우에만 Google 계정 ID와 이메일 주소가 Firebase Authentication에 저장되며, 기록을 다시 불러오는 데만 씁니다. 다른 플레이어에게 보이지 않고, 광고나 통계에 쓰지 않습니다. 연결하지 않아도 게임과 랭킹은 그대로 쓸 수 있습니다.</p>
 
 <h2>3. 정보의 이용 목적</h2>
 <ul>
   <li>광고 표시 및 광고 성과 측정</li>
   <li>앱 안정성 진단</li>
   <li>앱 이용 통계 분석(개선용)</li>
-  <li>랭킹 표시(Google Play 게임즈)</li>
+  <li>랭킹 표시, 닉네임 관리, 같은 닉네임 막기</li>
+  <li>신고 처리와 부정 사용 방지</li>
+  <li>Google 계정 연결 시 기록 복원</li>
 </ul>
 
-<h2>4. 정보의 제3자 제공</h2>
-<p>개발자는 사용자 정보를 판매하지 않습니다. 위 2항의 정보는 광고 제공을 위해 Google 및 Google의 광고 파트너와 공유됩니다. 2-2항의 랭킹 정보는 랭킹 표시를 위해 Google에 전송됩니다.</p>
+<h2>4. 정보의 제3자 제공과 처리 위탁</h2>
+<p>개발자는 사용자 정보를 판매하지 않습니다.</p>
+<ul>
+  <li>2절의 광고 정보는 광고 제공을 위해 Google 및 Google의 광고 파트너와 공유됩니다.</li>
+  <li>랭킹·로그인·통계 정보는 개발자를 대신해 Google LLC(Firebase, Google Cloud)가 처리합니다(처리 위탁).</li>
+  <li>닉네임과 최고 점수는 랭킹 기능에 따라 다른 플레이어에게 표시됩니다.</li>
+  <li>법령에 따른 요청이 있는 경우를 제외하고 그 밖의 제3자에게 제공하지 않습니다.</li>
+</ul>
 
-<h2>5. 아동</h2>
+<h2>5. 국외 이전</h2>
+<p>Google의 서비스(AdMob, Firebase Authentication, Google Analytics for Firebase, Play Integrity)를 통해 처리되는 정보는 대한민국 밖(미국 등 Google의 데이터 센터)에서 저장·처리될 수 있습니다. 랭킹 데이터(Cloud Firestore)는 서울 리전에 저장됩니다. 이전받는 자: Google LLC / 이전 시기·방법: 앱 사용 시 네트워크로 전송 / 목적과 보관 기간: 3절·7절과 같음. 국외 이전을 원하지 않으면 앱 사용을 중단하고 8절의 방법으로 삭제할 수 있습니다.</p>
+
+<h2>6. 아동</h2>
 <p>앱은 만 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
 
-<h2>6. 보관과 삭제</h2>
-<p>앱이 기기에 저장하는 게임 데이터는 앱을 삭제하면 함께 삭제됩니다. 광고 관련 데이터의 보관 기간과 삭제는 Google의 정책을 따릅니다. 랭킹 점수는 Google에 보관되며 2-2항의 방법으로 삭제할 수 있습니다.</p>
+<h2>7. 보관 기간</h2>
+<ul>
+  <li>기기 안의 게임 데이터: 앱을 삭제하면 함께 삭제됩니다.</li>
+  <li>랭킹 기록(사용자 ID, 닉네임, 최고 점수, 시각)과 Google 계정 연결 정보: 사용자가 삭제할 때까지 보관합니다.</li>
+  <li>신고 기록: 처리 뒤 90일이 지나면 삭제합니다.</li>
+  <li>광고·통계 데이터: Google의 정책과 2-1절의 기간을 따릅니다.</li>
+</ul>
 
-<h2>7. 방침의 변경</h2>
+<h2 id="delete">8. 내 기록 삭제</h2>
+<ul>
+  <li><strong>앱 안에서</strong>: 설정 → <strong>내 기록 삭제</strong> → [삭제]. 랭킹 기록과 닉네임, 익명 계정, Google 계정 연결이 바로 삭제되고, 이 기기의 최고 기록도 0이 됩니다. 되돌릴 수 없습니다.</li>
+  <li><strong>앱이 없을 때</strong>: <a href="delete.html">삭제 요청 안내</a>대로 이메일(<a href="mailto:builderrordev@gmail.com">builderrordev@gmail.com</a>)로 요청하면 7일 안에 삭제하고 답장합니다.</li>
+  <li>앱을 삭제하는 것만으로는 서버의 랭킹 기록이 지워지지 않습니다.</li>
+</ul>
+
+<h2>9. 방침의 변경</h2>
 <p>방침이 바뀌면 이 페이지에 갱신하고 시행일을 수정합니다.</p>
 
-<h2>8. 문의</h2>
-<p>이메일: <a href="mailto:builderrordev@gmail.com">builderrordev@gmail.com</a></p>
+<h2>10. 문의 (개인정보 보호 책임자)</h2>
+<p>빌드에러(BuildError) · 이메일: <a href="mailto:builderrordev@gmail.com">builderrordev@gmail.com</a></p>
 
 <hr>
 
-<h1>SlidePop! Privacy Policy</h1>
+<h1 id="en">SlidePop! Privacy Policy</h1>
 <p class="meta">Effective: October 16, 2026 · Developer: BuildError (빌드에러)</p>
 
 <p>This policy applies to the Android app <strong>SlidePop!</strong> (package name <code>com.jaemoon.slidepop</code>, the "App").</p>
 
-<h2>1. Information the App collects itself</h2>
-<p>The App has no accounts and does not ask for or send personal information such as your name, email address or phone number to the developer. The leaderboard feature in section 2-2 uses your Google Play Games account. Your game in progress and best score are stored <strong>only on your device</strong> and are deleted when you uninstall the App.</p>
+<h2>1. Information the App collects</h2>
+<p>The App does not ask for your real name, phone number or address. Your game in progress and your device best score are stored on your device.</p>
+<p>To run the world ranking, the App stores the following in the developer's Firebase project (Google Cloud). Details are in sections 2-2 to 2-5.</p>
+<ul>
+  <li>A random user ID that the App creates automatically (anonymous account)</li>
+  <li>Your nickname (assigned automatically or chosen by you), best score, and when they were set or changed</li>
+  <li>Reports (the user IDs of the reporter and the reported player, the nickname at the time, and the time)</li>
+  <li>Only if you link a Google Account: your Google Account ID and email address</li>
+</ul>
 
-<h2>2. Information collected through ads, statistics and leaderboards (Google services)</h2>
+<h2>2. Information collected through ads and statistics (Google services)</h2>
 <p>The App shows ads through Google AdMob. Google and its advertising partners may collect and process the following to serve and measure ads:</p>
 <ul>
   <li>Device identifiers such as the Advertising ID</li>
@@ -95,42 +148,81 @@
 <p>You can opt out of personalized ads in your device settings. Android: Settings → Google → Ads → "Opt out of Ads Personalization" or "Delete advertising ID".</p>
 
 <h2>2-1. App usage statistics (Google Analytics for Firebase)</h2>
-<p>To improve the App, we collect usage statistics with Google Analytics for Firebase: the app instance ID, the Android advertising ID, in-app activity (app opens, game starts and ends, score, moves, play time, item and ad use), device information (model, OS version, language) and approximate location (country/region) inferred from the IP address. This does not include personal identifiers such as your name or contact details, and it is processed by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<p>To improve the App, we collect usage statistics with Google Analytics for Firebase: the app instance ID, the Android advertising ID, in-app activity (app opens, game starts and ends, score, moves, play time, item and ad use, opening the ranking and submitting scores), device information (model, OS version, language) and approximate location (country/region) inferred from the IP address. Nicknames and email addresses are not included.</p>
 <p>Users in the European Economic Area, the United Kingdom and Switzerland are measured only within what they allowed on the consent screen and can change it at any time from the privacy options in the App's settings. User-level usage records are deleted automatically 14 months after your last use of the App.</p>
 
-<h2>2-2. Leaderboards (Google Play Games)</h2>
-<p>The App uses Google Play Games Services to show global leaderboards. When the App starts, it tries to sign you in automatically with the Google Play Games account on your device. You can keep playing without signing in; your scores are then not submitted to the leaderboard.</p>
-<p>When you are signed in, the following is sent to and processed by Google:</p>
+<h2>2-2. Ranking (Firebase)</h2>
+<p>The App uses Google's Firebase services for the world ranking.</p>
 <ul>
-  <li>Your Play Games profile: player ID, gamertag (nickname) and avatar</li>
-  <li>Your score when a game ends (to show it on the leaderboard)</li>
-  <li>Usage and diagnostics data that Google collects to keep the service stable and improve it</li>
+  <li><strong>Sign-in</strong>: When you open the App, Firebase Authentication creates an anonymous account automatically. No name or email is needed. Firebase Authentication processes your IP address to prevent sign-up and sign-in abuse.</li>
+  <li><strong>Where it is stored</strong>: Nicknames, best scores and reports are stored in Cloud Firestore in the Seoul region (asia-northeast3).</li>
+  <li><strong>Abuse prevention</strong>: Firebase App Check and Google Play Integrity check that requests come from the genuine App. Device and app integrity information is processed by Google for this.</li>
+  <li><strong>Who can see it</strong>: Other players can see your <strong>nickname and best score</strong> on the ranking screen. Your user ID, email address and Google Account information are not shown.</li>
+  <li>Data is encrypted in transit (HTTPS). The developer does not sell this information or use it for ads.</li>
 </ul>
-<p>Your nickname, avatar and score on the leaderboard may be visible to other players, depending on your Play Games profile visibility settings. The App's ranking screen shows other players' nicknames and scores. This information is processed by Google under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, not on the developer's servers, and the developer does not sell it. It is encrypted in transit (HTTPS).</p>
-<p><strong>How to delete it</strong>: You can delete this game's data or your whole Play Games account from your <a href="https://play.google.com/games/profile">Play Games profile</a> or your <a href="https://myaccount.google.com">Google Account</a>. Uninstalling the App does not remove leaderboard scores stored by Google.</p>
+
+<h2 id="nickname-en">2-3. Nickname rules</h2>
+<p>You start with an automatic nickname such as "Player123456" and can change it in Settings or on the ranking screen (2–7 Korean or 4–14 English characters; letters, numbers and _ only; once a day).</p>
+<p>You may not use a nickname that:</p>
+<ul>
+  <li>contains profanity, sexual content, hate or discrimination, or encourages violence or self-harm</li>
+  <li>impersonates another person or the developer, an administrator or a moderator</li>
+  <li>contains someone's personal information, such as a real name or phone number</li>
+  <li>advertises something or promotes illegal activity</li>
+</ul>
+<p>The App filters nicknames with a list of banned words (<a href="licenses.html">open source notices</a>). If an inappropriate nickname gets through, we may, after a report, change it back to an automatic nickname or hide it from the ranking without notice. By changing your nickname you agree to these rules.</p>
+
+<h2>2-4. Hiding and reporting</h2>
+<p>Press and hold another player's nickname in the ranking to "Hide and report this name". The name then shows as "Hidden" on your device, and a report is sent to the developer (the user IDs of the reporter and the reported player, the nickname at the time, and the time). The developer reviews reports and acts under section 2-3.</p>
+
+<h2>2-5. Linking a Google Account (optional)</h2>
+<p>If you link a Google Account in Settings, you can bring back the same record on another device or after reinstalling. Only if you link, your Google Account ID and email address are stored in Firebase Authentication and used only to restore your record. They are not shown to other players and are not used for ads or statistics. You can play and use the ranking without linking.</p>
 
 <h2>3. How the information is used</h2>
 <ul>
   <li>Showing ads and measuring ad performance</li>
   <li>Diagnosing app stability</li>
   <li>Analysing app usage statistics (to improve the App)</li>
-  <li>Showing leaderboards (Google Play Games)</li>
+  <li>Showing the ranking, managing nicknames and preventing duplicate nicknames</li>
+  <li>Handling reports and preventing abuse</li>
+  <li>Restoring your record when you link a Google Account</li>
 </ul>
 
-<h2>4. Sharing with third parties</h2>
-<p>The developer does not sell user information. The information in section 2 is shared with Google and Google's advertising partners to provide ads. Leaderboard information in section 2-2 is sent to Google to show leaderboards.</p>
+<h2>4. Sharing and processors</h2>
+<p>The developer does not sell user information.</p>
+<ul>
+  <li>The advertising information in section 2 is shared with Google and Google's advertising partners to provide ads.</li>
+  <li>Ranking, sign-in and statistics data are processed by Google LLC (Firebase, Google Cloud) on the developer's behalf.</li>
+  <li>Your nickname and best score are shown to other players as part of the ranking.</li>
+  <li>We do not provide information to any other third party except when required by law.</li>
+</ul>
 
-<h2>5. Children</h2>
+<h2>5. International transfers</h2>
+<p>Information processed through Google services (AdMob, Firebase Authentication, Google Analytics for Firebase, Play Integrity) may be stored and processed outside your country, including in the United States. Ranking data (Cloud Firestore) is stored in the Seoul region. Recipient: Google LLC. When and how: sent over the network while you use the App. Purpose and retention: as in sections 3 and 7. If you do not want this, stop using the App and delete your data as described in section 8.</p>
+
+<h2>6. Children</h2>
 <p>The App is not directed to children under 13 and does not knowingly collect personal information from children.</p>
 
-<h2>6. Retention and deletion</h2>
-<p>Game data stored on your device is deleted when you uninstall the App. Retention and deletion of advertising data follow Google's policies. Leaderboard scores are kept by Google and can be deleted as described in section 2-2.</p>
+<h2>7. Retention</h2>
+<ul>
+  <li>Game data on your device: deleted when you uninstall the App.</li>
+  <li>Ranking record (user ID, nickname, best score, times) and Google Account link: kept until you delete it.</li>
+  <li>Reports: deleted 90 days after they are handled.</li>
+  <li>Advertising and statistics data: follow Google's policies and the period in section 2-1.</li>
+</ul>
 
-<h2>7. Changes</h2>
+<h2 id="delete-en">8. Deleting your record</h2>
+<ul>
+  <li><strong>In the App</strong>: Settings → <strong>Delete my record</strong> → [Delete]. Your ranking record, nickname, anonymous account and Google Account link are deleted right away, and your device best score is reset to 0. This cannot be undone.</li>
+  <li><strong>Without the App</strong>: follow the <a href="delete.html">deletion request page</a> and email <a href="mailto:builderrordev@gmail.com">builderrordev@gmail.com</a>. We delete the data within 7 days and reply.</li>
+  <li>Uninstalling the App alone does not delete your ranking record on the server.</li>
+</ul>
+
+<h2>9. Changes</h2>
 <p>If this policy changes, this page will be updated and the effective date revised.</p>
 
-<h2>8. Contact</h2>
-<p>Email: <a href="mailto:builderrordev@gmail.com">builderrordev@gmail.com</a></p>
+<h2>10. Contact (privacy officer)</h2>
+<p>BuildError (빌드에러) · Email: <a href="mailto:builderrordev@gmail.com">builderrordev@gmail.com</a></p>
 
 </body>
 </html>
